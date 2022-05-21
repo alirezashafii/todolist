@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>To Do List</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The To Do List." />
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Alireza Shafii">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled" />
+    <meta name="theme-color" content="#F1F5F9" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.png" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    
+    <header>
+        <h2 class="title">Today's Goal</h2>
+        <span class="count"></span>
+    </header>
+    <hr />
+    <section></section>
+    <footer>
+        <div class="top">
+            <select name="options" id="filter-todos">
+                <option value="all">All</option>
+                <option value="uncompleted">Uncompleted</option>
+                <option value="completed">Completed</option>
+            </select>
+            <a href="https://github.com/alirezashafii" target="_blank">
+                <span class="avatar"></span>
+            </a>
+        </div>
+        <div class="bottom">
+            <button class="add-btn" onclick="focusInput()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
+                </svg>
+            </button>
+        </div>
+    </footer>
+    <div class="backdrop"></div>
+    <div class="modal">
+        <h4>Write your own task or goal!</h4>
+        <input type="text" id="item" placeholder="whats next">
+        <button type="submit" class="confirm">confirm</button>
+    </div>
+
+    <script src="./javascript/main.js"></script>
+  </body>
+</html>

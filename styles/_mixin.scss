@@ -1,0 +1,11 @@
+@mixin query($width) {
+  @if ($width == 501) {
+    @media screen and (min-width: 501px) and (max-width: 767px) {
+      @content;
+    }
+  } @else if ($width == 768) {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+}
