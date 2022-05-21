@@ -45,7 +45,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 25px 40px;
+  padding: 25px 35px;
 }
 
 @media screen and (min-width: 501px) and (max-width: 767px) {
@@ -219,7 +219,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   row-gap: 3px;
-  padding: 20px 40px 40px;
+  padding: 20px 35px 40px;
   background: linear-gradient(-45deg, #fed7aa, #fca5a5, #e0f2fe, #f1f5f9);
   background-size: 400% 400%;
   -webkit-animation: gradient 15s ease infinite;
