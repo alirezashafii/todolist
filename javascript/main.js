@@ -8,12 +8,16 @@ const counter = document.querySelector(".count");
 const filterOption = document.getElementById("filter-todos");
 
 document.addEventListener("DOMContentLoaded", getLocalTodos);
+
 toDoList.addEventListener("click", checkRemove);
+
 backDrop.addEventListener("click", closeModal);
+
 addBtn.addEventListener("click", () => {
   backDrop.style.display = "block";
   modal.style.display = "inline-block";
 });
+
 confirmBtn.addEventListener("click", (e) => {
   e.preventDefault();
   if (input.value === "") {
@@ -42,15 +46,18 @@ confirmBtn.addEventListener("click", (e) => {
     counter.textContent = JSON.parse(localStorage.getItem('todos')).length;
   }
 });
+
 filterOption.addEventListener("click", filterTodos);
 
 function focusInput() {
   document.querySelector("#item").focus();
 }
+
 function closeModal() {
   backDrop.style.display = "none";
   modal.style.display = "none";
 }
+
 function checkRemove(e) {
   const classlist = [...e.target.classList];
   const item = e.target;
@@ -65,6 +72,7 @@ function checkRemove(e) {
     counter.textContent = JSON.parse(localStorage.getItem('todos')).length;
   }
 }
+
 function filterTodos(e) {
   const todos = [...toDoList.childNodes];
   todos.forEach((it) => {
@@ -89,6 +97,7 @@ function filterTodos(e) {
     }
   });
 }
+
 function savedTodos(item) {
   let savedLocal = localStorage.getItem("todos")
     ? JSON.parse(localStorage.getItem("todos"))
@@ -96,6 +105,7 @@ function savedTodos(item) {
   savedLocal.push(item);
   localStorage.setItem("todos", JSON.stringify(savedLocal));
 }
+
 function getLocalTodos() {
   let savedtodos = localStorage.getItem("todos")
     ? JSON.parse(localStorage.getItem("todos"))
@@ -118,6 +128,7 @@ function getLocalTodos() {
     toDoList.appendChild(toDoDiv);
   });
 }
+
 function removeLocalTodos(item) {
   let savedtodos = localStorage.getItem("todos")
     ? JSON.parse(localStorage.getItem("todos"))
